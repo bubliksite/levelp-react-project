@@ -1,0 +1,16 @@
+@import './src/styles/variables.scss';
+
+.add-button {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  border-radius: 50%;
+  background-color: $color-main;
+  box-shadow: 0.3rem 0.3rem 0.5rem 0.1rem rgb(0 0 0 / 25%);
+  &:hover {
+    background-color: $color-main-hover;
+  }
+  &:focus {
+    box-shadow: 0 0 0 0.25rem $color-main-hover-opacity;
+  }
+}

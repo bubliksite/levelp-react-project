@@ -1,0 +1,7 @@
+@import './src/styles/mixins.scss';
+
+.list-group {
+  @include container;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,19 @@
+@import './src/styles/variables.scss';
+@import './src/styles/mixins.scss';
+
+.header {
+  background-color: $color-main;
+  padding: 2rem;
+  &__container {
+    @include container;
+  }
+  &__search-bar {
+    display: flex;
+    justify-content: center;
+    input {
+      margin-right: 0.5rem;
+      width: 50%;
+      max-width: 95%;
+    }
+  }
+}

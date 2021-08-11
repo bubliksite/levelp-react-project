@@ -1,0 +1,15 @@
+.item {
+  border: 1px solid #aaaaaa;
+  border-radius: 0.7rem;
+  padding: 1rem 1.5rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  &__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

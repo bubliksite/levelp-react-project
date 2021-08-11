@@ -1,0 +1,29 @@
+@import './src/styles/variables.scss';
+
+button {
+  cursor: pointer;
+  padding: 0.5rem 0.6rem 0.4rem 0.6rem;
+  border: 1px solid transparent;
+  border-radius: $radius;
+  font-size: 1rem;
+  &.danger {
+    background-color: $color-danger;
+    color: #ffffff;
+    &:hover {
+      background-color: $color-danger-hover;
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.25rem $color-danger-hover-opacity;
+    }
+  }
+  &.light {
+    background-color: $color-light;
+    color: #000;
+    &:hover {
+      background-color: $color-light-hover;
+    }
+    &:focus {
+      box-shadow: 0 0 0 0.25rem $color-light-hover-opacity;
+    }
+  }
+}
