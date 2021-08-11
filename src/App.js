@@ -3,6 +3,7 @@ import React from 'react';
 import Header from './components/Header';
 import TodoContainer from './container/TodoContainer';
 import AddButton from './components/AddButton';
+import Modals from './components/Modals';
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Header />
       <TodoContainer />
       <AddButton />
+      <Modals />
     </div>
   );
 }
