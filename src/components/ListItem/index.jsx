@@ -4,16 +4,16 @@ import Button from '../Button';
 
 import iconTrash from '../../assets/icons/icon-trash.svg';
 
-const ListItem = () => {
+const ListItem = ({ item, showModalDeleteTodo, showModalEditTodo }) => {
   return (
     <>
-      <div className="item">
-        <div className="item__title">title</div>
+      <div className="item" onClick={() => showModalEditTodo()}>
+        <div className="item__title">{item.title}</div>
         <hr />
         <div className="item__content content">
-          <p className="content__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+          <p className="content__text">{item.text ? item.text : <em>No description in task</em>}</p>
           <div className="content__buttons">
-            <Button icon={iconTrash} variant="danger" />
+            <Button icon={iconTrash} variant="danger" onClick={(e) => showModalDeleteTodo(e)} />
           </div>
         </div>
       </div>

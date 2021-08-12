@@ -2,10 +2,8 @@
 
 .modal {
   @include modal;
-  .input {
-    margin-bottom: 1.5rem;
-  }
-  .form__buttons {
+  &__buttons {
+    margin-top: 2rem;
     :first-child {
       margin-right: 1rem;
     }
