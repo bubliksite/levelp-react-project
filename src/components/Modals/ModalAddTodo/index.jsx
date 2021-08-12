@@ -32,6 +32,7 @@ export default function ModalAddTodo({
                 label="Enter the title for task"
                 placeholder="Enter title here"
                 value={title}
+                autofocus={true}
                 error={validationError}
                 limit={limit}
                 onChange={(e) => handlerChangeTitle(e)}

@@ -1,7 +1,30 @@
 @import './src/styles/mixins.scss';
+@import './src/styles/variables.scss';
 
 .list-group {
   @include container;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+.list-empty {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #aaaaaa;
+}
+
+.ls__buttons {
+  @include container();
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  button {
+    margin: 0 0.5rem;
+  }
+  .message {
+    font-size: 0.8rem;
+    margin: 0 2rem;
+    color: $color-success;
+  }
 }

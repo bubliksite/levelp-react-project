@@ -4,7 +4,7 @@ import Image from '../../Image';
 import iconClose from '../../../assets/icons/icon-close.svg';
 import Button from '../../Button';
 
-export default function ModalDeleteTodo({ closeModalDeleteTodo }) {
+export default function ModalDeleteTodo({ id, handlerDeleteTodo, closeModalDeleteTodo }) {
   return (
     <>
       <div className="modal">
@@ -18,7 +18,7 @@ export default function ModalDeleteTodo({ closeModalDeleteTodo }) {
           <div className="modal__body">
             <p>Are you sure you want to delete task 'title'?</p>
             <div className="modal__buttons">
-              <Button variant="danger" title="Delete" />
+              <Button variant="danger" title="Delete" onClick={(e) => handlerDeleteTodo(e, id)} />
               <Button title="Cancel" onClick={closeModalDeleteTodo} />
             </div>
           </div>

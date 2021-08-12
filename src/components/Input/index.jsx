@@ -1,7 +1,7 @@
 import React from 'react';
 import './styles.scss';
 
-const Input = ({ value, onChange, label, placeholder, error, limit }) => {
+const Input = ({ value, onChange, label, placeholder, autofocus, error, limit }) => {
   const classes = `${error ? 'invalid' : ''} ${label ? 'mt-2' : ''}`;
   return (
     <div className="input">
@@ -17,6 +17,7 @@ const Input = ({ value, onChange, label, placeholder, error, limit }) => {
         className={classes}
         placeholder={placeholder}
         type="text"
+        autoFocus={autofocus}
         value={value}
         onChange={onChange}
       />

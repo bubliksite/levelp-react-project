@@ -15,7 +15,6 @@ export default function ModalAddTodoContainer() {
 
   const handlerChangeTitle = (e) => {
     setTitle(e.target.value);
-    console.log(e.target.value.length + '/' + limit);
     if (e.target.value.length > limit) {
       setValidationError(`The length of title should be equal or less than ${limit} chars`);
     } else {
