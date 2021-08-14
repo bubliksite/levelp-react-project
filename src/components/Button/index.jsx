@@ -1,4 +1,7 @@
 import React from 'react';
+
+import PropTypes from 'prop-types';
+
 import './styles.scss';
 import Image from '../Image';
 
@@ -12,6 +15,15 @@ const Button = ({ icon, title, type, variant, disabled, onClick }) => {
       </button>
     </>
   );
+};
+
+Button.propTypes = {
+  icon: PropTypes.string,
+  title: PropTypes.string,
+  type: PropTypes.string,
+  variant: PropTypes.string,
+  disabled: PropTypes.bool,
+  onClick: PropTypes.func,
 };
 
 export default Button;

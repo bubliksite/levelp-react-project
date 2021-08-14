@@ -4,6 +4,8 @@ import Image from '../../Image';
 import Input from '../../Input';
 import Button from '../../Button';
 
+import PropTypes from 'prop-types';
+
 import iconClose from '../../../assets/icons/icon-close.svg';
 
 export default function ModalAddTodo({
@@ -59,3 +61,14 @@ export default function ModalAddTodo({
     </>
   );
 }
+
+ModalAddTodo.propTypes = {
+  title: PropTypes.string,
+  text: PropTypes.string,
+  limit: PropTypes.number,
+  validationError: PropTypes.string,
+  handlerChangeTitle: PropTypes.func,
+  handlerChangeText: PropTypes.func,
+  handlerAddTodo: PropTypes.func,
+  closeModalAddTodo: PropTypes.func,
+};

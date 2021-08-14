@@ -2,6 +2,8 @@ import React from 'react';
 import './styles.scss';
 import Button from '../Button';
 
+import PropTypes from 'prop-types';
+
 import iconTrash from '../../assets/icons/icon-trash.svg';
 
 const ListItem = ({ item, showModalDeleteTodo, showModalEditTodo }) => {
@@ -16,13 +18,19 @@ const ListItem = ({ item, showModalDeleteTodo, showModalEditTodo }) => {
             <Button
               icon={iconTrash}
               variant="danger"
-              onClick={(e) => showModalDeleteTodo(e, item.id)}
+              onClick={(e) => showModalDeleteTodo(e, item.id, item.title)}
             />
           </div>
         </div>
       </div>
     </>
   );
+};
+
+ListItem.propTypes = {
+  item: PropTypes.object,
+  showModalDeleteTodo: PropTypes.func,
+  showModalEditTodo: PropTypes.func,
 };
 
 export default ListItem;

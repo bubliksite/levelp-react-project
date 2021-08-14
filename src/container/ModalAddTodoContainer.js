@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 
 import ModalAddTodo from '../components/Modals/ModalAddTodo';
 import { useDispatch } from 'react-redux';
+
 import { actionHideModal } from '../store/modals';
 import { actionAddTodo } from '../store/todos';
 
@@ -27,7 +28,7 @@ export default function ModalAddTodoContainer() {
   };
 
   const handlerAddTodo = (e) => {
-    e.preventDefault();
+    setTitle(e.target.value.trim());
     switch (true) {
       case !title.length:
         setValidationError("Field can't be empty");

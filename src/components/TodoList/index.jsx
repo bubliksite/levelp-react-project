@@ -3,6 +3,8 @@ import './styles.scss';
 import ListItem from '../ListItem';
 import Button from '../Button';
 
+import PropTypes from 'prop-types';
+
 const TodoList = ({
   todo,
   messageSaveToLocalStorage,
@@ -43,6 +45,15 @@ const TodoList = ({
       ) : null}
     </>
   );
+};
+
+TodoList.propTypes = {
+  todo: PropTypes.array,
+  messageSaveToLocalStorage: PropTypes.string,
+  showModalDeleteTodo: PropTypes.func,
+  showModalEditTodo: PropTypes.func,
+  saveToLocalStorage: PropTypes.func,
+  removeFromLocalStorage: PropTypes.func,
 };
 
 export default TodoList;

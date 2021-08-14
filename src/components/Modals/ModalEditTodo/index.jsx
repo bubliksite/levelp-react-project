@@ -5,6 +5,8 @@ import iconClose from '../../../assets/icons/icon-close.svg';
 import Input from '../../Input';
 import Button from '../../Button';
 
+import PropTypes from 'prop-types';
+
 export default function ModalEditTodo({
   id,
   title,
@@ -58,3 +60,16 @@ export default function ModalEditTodo({
     </>
   );
 }
+
+ModalEditTodo.propTypes = {
+  id: PropTypes.number,
+  title: PropTypes.string,
+  limit: PropTypes.number,
+  valueTitle: PropTypes.string,
+  valueText: PropTypes.string,
+  validationError: PropTypes.string,
+  handlerChangeTitle: PropTypes.func,
+  handlerChangeText: PropTypes.func,
+  handlerEditTodo: PropTypes.func,
+  closeModalEditTodo: PropTypes.func,
+};

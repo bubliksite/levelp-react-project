@@ -9,4 +9,5 @@ export default Image;
 
 Image.propTypes = {
   source: PropTypes.string,
+  alt: PropTypes.string,
 };

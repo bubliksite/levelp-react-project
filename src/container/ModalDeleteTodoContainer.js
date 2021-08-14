@@ -5,7 +5,7 @@ import { useDispatch } from 'react-redux';
 import { actionHideModal } from '../store/modals';
 import { actionDeleteTodo } from '../store/todos';
 
-export default function ModalDeleteTodoContainer({ id }) {
+export default function ModalDeleteTodoContainer({ id, title }) {
   const dispatch = useDispatch();
 
   const closeModalDeleteTodo = () => {
@@ -19,6 +19,7 @@ export default function ModalDeleteTodoContainer({ id }) {
   return (
     <ModalDeleteTodo
       id={id}
+      title={title}
       closeModalDeleteTodo={closeModalDeleteTodo}
       handlerDeleteTodo={handlerDeleteTodo}
     />

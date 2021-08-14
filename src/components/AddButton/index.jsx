@@ -4,11 +4,14 @@ import Image from '../Image';
 import iconAdd from '../../assets/icons/icon-add.svg';
 import { actionShowModal } from '../../store/modals';
 import { useDispatch } from 'react-redux';
+import { useHistory } from 'react-router-dom';
 
 const AddButton = () => {
   const dispatch = useDispatch();
+  const history = useHistory();
 
   const showModalAddTodo = () => {
+    history.replace('');
     dispatch(
       actionShowModal({
         name: 'modalAddTodo',

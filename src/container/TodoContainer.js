@@ -28,12 +28,13 @@ export default function TodoContainer() {
     ? todo.filter((item) => item.title.toLowerCase().includes(getSearchValue.toLowerCase()))
     : todo;
 
-  const showModalDeleteTodo = (e, id) => {
+  const showModalDeleteTodo = (e, id, title) => {
     e.stopPropagation();
     dispatch(
       actionShowModal({
         name: 'modalDeleteTodo',
         id,
+        title,
       }),
     );
   };
