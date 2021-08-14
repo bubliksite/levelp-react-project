@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import { useLocation } from 'react-router-dom';
+
 import TodoList from '../components/TodoList';
 import { useDispatch, useSelector } from 'react-redux';
 import { actionShowModal } from '../store/modals';
@@ -19,6 +21,12 @@ export default function TodoContainer() {
   const dispatch = useDispatch();
 
   const { todo } = useSelector((state) => state.todo);
+
+  const location = useLocation();
+  const getSearchValue = new URLSearchParams(location.search).get('search');
+  const searchCategoryTitle = getSearchValue
+    ? todo.filter((item) => item.title.toLowerCase().includes(getSearchValue.toLowerCase()))
+    : todo;
 
   const showModalDeleteTodo = (e, id) => {
     e.stopPropagation();
@@ -60,7 +68,7 @@ export default function TodoContainer() {
 
   return (
     <TodoList
-      todo={todo}
+      todo={searchCategoryTitle}
       messageSaveToLocalStorage={messageSaveToLocalStorage}
       saveToLocalStorage={saveToLocalStorage}
       removeFromLocalStorage={removeFromLocalStorage}

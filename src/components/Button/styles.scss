@@ -23,6 +23,10 @@ button {
       box-shadow: 0 0 0 0.25rem $color-danger-hover-opacity;
     }
   }
+  &.link {
+    background-color: transparent;
+    color: #ffffff;
+  }
   &.light {
     background-color: $color-light;
     color: #000;

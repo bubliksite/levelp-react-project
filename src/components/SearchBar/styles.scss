@@ -1,0 +1,25 @@
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .input {
+    width: 50%;
+    max-width: 95%;
+    input {
+      background-color: transparent;
+      color: #fff;
+      border-radius: 0;
+      border: none;
+      border-bottom: 1px solid #fff;
+      &::placeholder {
+        color: #fff;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    button {
+      margin-left: 0.5rem;
+    }
+  }
+}
